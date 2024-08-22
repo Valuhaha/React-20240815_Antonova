@@ -9,15 +9,15 @@ const root = createRoot(rootElement);
 const Restaurant = (restaurant) => {
   return (
       <div>
-          <h1>{restaurant.name}</h1>
-          <h2>Menu</h2>
+          <h2>{restaurant.name}</h2>
+          <h3>Menu</h3>
           <ul>
               {restaurant.menu.map(item => (
                   <li key={item.id}> {item.name} - {item.price}$
                   </li>
               ))}
           </ul>
-          <h2>Reviews</h2>
+          <h3>Reviews</h3>
           <ul>
               {restaurant.reviews.map(review => (
                   <li key={review.id}> {review.user}: {review.text} (Rate: {review.rating})
